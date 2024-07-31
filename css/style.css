@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Red Rose', sans-serif;
+}
+
+.upheadbar {
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 25px;
+}
+
+.upheadbar p {
+    color: #fff;
+    font-family: 'Red Rose', sans-serif;
+}
+
+.upheadbar p:hover {
+    color: #fff;
+    font-family: 'Red Rose', sans-serif;
+    font-weight: bold;
+}
+
+.header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+
+.header .menu-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .menu-icon i {
+    font-size: 20px;
+    color: #fff; 
+    transition: color 0.3s ease-in-out;
+}
+
+.header .menu-icon i:hover {
+    color: #fff;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.header .nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #fff !important; 
+    font-size: 16px;
+    font-family: 'Red Rose', sans-serif;
+    transition: color 0.3s, box-shadow 0.3s;
+    padding: 5px 10px;
+}
+
+.header .nav a:hover {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.header .nav a i {
+    font-size: 18px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.header .nav a:hover i {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video.banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.more-info {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Red Rose', sans-serif;    
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.more-info h2 {
+    font-size: 23px;
+}
+
+.more-info h2:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.more-info a {
+    padding: 10px 6px;
+    font-family: 'Red Rose', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    text-decoration: none;
+}
+
+.more-info a.btn41-43.btn-42:hover {
+    color: black !important;
+}
+
+.more-info a:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.more-info a:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.more-info a:active {
+    top: 2px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container .escrito-do-titulo {
+    font-family: 'Red Rose', sans-serif;
+    text-align: center;
+}
+
+.escrito-diferente {
+    display: inline; 
+    border-bottom: #333 solid 1px;
+}
+
+.escrito-diferente:hover {
+    font-weight: bold;
+    border-bottom: 0;
+}
+
+.titulo-do-main {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Red Rose', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.titulo-do-main:hover {
+    transform: translateY(-4px); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); 
+    color: #000; 
+}
+
+.titulo-do-main::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.titulo-do-main:hover::after {
+    opacity: 1;     
+}
+
+#categories {
+    padding-top: 20px;
+  }
+  
+#categories .container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 90px; 
+    justify-content: center; 
+    font-family: 'Red Rose', sans-serif;
+}
+  
+  /* Estiliza cada item de categoria */
+.item-categorie {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  width: 100%; 
+  max-width: 140px; 
+  text-align: center; 
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 100%; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: ease-in-out 0.3s;
+}
+
+.item-categorie:hover{
+  background-color: #fff;
+  max-width: 150px;
+}
+.item-categorie img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item-categorie a {
+  margin-top: 10px;
+  text-decoration: none !important; 
+  color: #000 !important; 
+  font-size: 13px;
+  transition: ease-in-out 0.3s;
+}
+
+.item-categorie a:hover {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#firstsell {
+  padding-top: 200px;
+}
+
+#firstsell video {
+  float: left;
+  height: 900px;
+}
+
+#firstsell .information-sell {
+  text-align: center;
+  font-family: 'Red Rose', sans-serif;
+  font-size: 2.5em;
+  padding-top: 20px;
+}
+#firstsell .container {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(100px, 500px);
+  }
+
+.content {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    transform: translate(220px, -280px);
+}
+
+.caro-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    border: 2px solid #000;
+    margin: 90px;
+}
+
+.slide img {
+    width: 70%;
+}
