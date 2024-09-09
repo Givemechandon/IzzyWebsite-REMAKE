@@ -283,52 +283,11 @@ main {
 }
 
 #firstsell {
-  padding-top: 200px;
-}
-
-#firstsell video {
-  float: left;
-  height: 900px;
-}
-
-#firstsell .information-sell {
-  text-align: center;
-  font-family: 'Red Rose', sans-serif;
-  font-size: 2.5em;
-  padding-top: 20px;
-}
-#firstsell .container {
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: translate(100px, 500px);
-  }
-
-.content {
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
-    position: relative;
-    left: 0px;
-    transform: translate(220px, -280px);
-}
-
-.caro-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
     display: flex;
+    justify-content: center;
 }
 
-.bar {
-    width: 60px;
-    border-radius: 50%;
-    height: 60px;
-    border: 2px solid #000;
-    margin: 90px;
-}
-
-.slide img {
-    width: 70%;
+#firstsell .container {
+    display: flex;
+    justify-content: space-evenly
 }

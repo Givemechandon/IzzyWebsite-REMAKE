@@ -91,50 +91,49 @@
                 <a href="#">Shoulder Bags</a>
             </div>
         </div>
+        <hr>
     </section>
     <section id="firstsell">
-        <hr>
-        <video class="sellvideo" autoplay muted loop>
-            <source src="/assets/img/videofirstsell.mp4" type="video/mp4">
-            Desculpe, seu navegador não suporta vídeos com autoplay.
-        </video>
-        <div class="information-sell">
-            <h2>The Millionaire Past</h2>
-            <div class="container">
-                <div class="content">
-                    <div class="slides">
-                        <input type="radio" name="slide" id="slide1" checked>
-                        <input type="radio" name="slide" id="slide2">
-                        <input type="radio" name="slide" id="slide3">    
-                    </div>
-                    <div class="slide s1">
-                            <a href="">
-                            <img src="/assets/img/dressitem.png" alt="">
-                            <p>Black Widow</p>
-                            </a>
-                    </div>
-                    <div class="slide">
-                        <a href="">
-                            <img src="/assets/img/Heelsitem.png" alt="">
-                            <p>Darkness Intention 25mm</p>
-                            </a>
-                    </div>
-                    <div class="slide">
-                        <a href="">
-                            <img src="/assets/img/shoulderitem.png" alt="">
-                            <p>Solar Expansive</p>
-                            </a>
-                    </div>
-
-                    <div class="caro-nav">
-                        <label class="bar" for="slide1"></label>
-                        <label class="bar" for="slide2"></label>
-                    </div>
-
+        <div class="container">
+            <video class="sellvideo w-100" autoplay muted loop>
+                <source src="/assets/img/videofirstsell.mp4" type="video/mp4">
+                Desculpe, seu navegador não suporta vídeos com autoplay.
+              </video>
+              <h3 class="title-firstsell">
+                The Past of a Billionarie
+              </h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorem, debitis laboriosam nobis id consectetur, voluptatum deserunt architecto unde similique saepe aliquam assumenda, deleniti quis vitae commodi. Amet, odit dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint accusamus odio ex repudiandae magni error deserunt quidem aliquid, quisquam harum, perferendis quod soluta voluptatum excepturi ratione, reiciendis dignissimos quaerat mollitia.</p>
+        </div>
+    </section>
+    <section id="items-to-firstsell">
+        <div class="container">
+            <h2>Now has the Time to Choose.</h2>
+            <div class="row">   
+                <div class="card-firstsell card1">
+                    <img src="/assets/img/dressitem.png" alt="Dress item">
+                    <h6 class="Title-itemsell">The Black Widow</h6>
+                    <p class="price-itemsell">$2400,00</p>
+                </div>
+                <div class="card-firstsell card2">
+                    <img src="/assets/img/Heelsitem.png" alt="Hells item">
+                    <h6 class="Title-itemsell">Foots of the Hell</h6>
+                    <p class="price-itemsell">$6000,00</p>
+                </div>
+                <div class="card-firstsell card3">
+                    <img src="/assets/img/shoulderitem.png" alt="Shoulder item">
+                    <h6 class="Title-itemsell">The Last Dark Dance</h6>
+                    <p class="price-itemsell">$1200,00</p>
+                </div>
+                <div class="card-firstsell card4">
+                    <img src="/assets/img/glassesitem.png" alt="Shoulder item">
+                    <h6 class="Title-itemsell">The Darkness Touch</h6>
+                    <p class="price-itemsell">$900,00</p>
                 </div>
             </div>
         </div>
     </section>
+      
+        
     <!-- <div class="pre-footer">
         <h1>Amour Services</h1>
         <div class="container">
@@ -178,6 +177,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script src="/assets/carousel.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const slides = document.querySelectorAll('.slide');
+          const radios = document.querySelectorAll('input[type="radio"]');
+          let currentIndex = 0;
+        
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              slide.style.display = (i === index) ? 'block' : 'none';
+            });
+            radios.forEach((radio, i) => {
+              radio.checked = (i === index);
+            });
+          }
+        
+          showSlide(currentIndex);
+        
+          setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+          }, 3000); // Troca de slide a cada 3 segundos
+        });
+        </script>
+        
 </body>
 
 </html>
